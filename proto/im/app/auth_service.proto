@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package icuc.im.app;
+option go_package = "protobuf/im/app";
+
+service AuthService {
+  // 登入
+  rpc Login(LoginRequest) returns (LoginResponse) {}
+  // 登出
+  rpc Logout(LogoutRequest) returns (LogoutResponse) {}
+  // 注册
+  rpc Register(RegisterRequest) returns (RegisterResponse) {}
+  // 刷新token
+  rpc Refresh(RefreshRequest) returns (RefreshResponse) {}
+  // 忘记密码
+  rpc Forget(ForgetRequest) returns (ForgetResponse) {}
+}
+
+message UserPassInfo {
+  string UserName = 1; // 登录的全局唯一用户名，字母数组组合
+  string Password = 2; // 登录密码
+  string DeviceName = 3; // 设备名字
+}
+
+message OauthInfo {
+  uint32 Type = 1; // oauth的类型，1 微信
+  string Token = 2;// oauth的token信息
+}
+
+message LoginRequest {
+  uint32 LoginType = 1; // 登录类型，1用户名密码登录，2 oauth登录
+  UserPassInfo UserPassInfo = 2; // 用户名密码等信息
+  OauthInfo OauthInfo = 3; // oauth登录的信息
+  string Platform = 4; // 设备类型
+}
+
+message LoginResponse {
+  string AccessToken = 1; // 登录成功返回的access_token
+  uint32 Expire = 2; // access_token过期时间，单位秒
+}
+
+message LogoutRequest {
+  // 请求消息定义
+}
+
+message LogoutResponse {
+  // 响应消息定义
+}
+
+
+message RegisterRequest {
+  // 请求消息定义
+}
+
+message RegisterResponse {
+  // 响应消息定义
+}
+
+message RefreshRequest {
+  // 请求消息定义
+}
+
+message RefreshResponse {
+  // 响应消息定义
+}
+
+message ForgetRequest {
+  // 请求消息定义
+}
+
+message ForgetResponse {
+  // 响应消息定义
+}

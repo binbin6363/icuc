@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package icuc.im.app;
+option go_package = "protobuf/im/app";
+
+service MessageService {
+  // 单人消息
+  rpc SingleMessage(SingleMessageRequest) returns (SingleMessageResponse) {}
+  // 群消息
+  rpc GroupMessage(GroupMessageRequest) returns (GroupMessageResponse) {}
+  // 图片消息
+  rpc ImageMessage(ImageMessageRequest) returns (ImageMessageResponse) {}
+  // 文件消息
+  rpc FileMessage(FileMessageRequest) returns (FileMessageResponse) {}
+}
+
+message SingleMessageRequest {
+  // 请求消息定义
+}
+
+message SingleMessageResponse {
+  // 响应消息定义
+}
+
+message GroupMessageRequest {
+  // 请求消息定义
+}
+
+message GroupMessageResponse {
+  // 响应消息定义
+}
+
+
+message ImageMessageRequest {
+  // 请求消息定义
+}
+
+message ImageMessageResponse {
+  // 响应消息定义
+}
+
+message FileMessageRequest {
+  // 请求消息定义
+}
+
+message FileMessageResponse {
+  // 响应消息定义
+}
