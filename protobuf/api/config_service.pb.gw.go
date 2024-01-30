@@ -81,7 +81,7 @@ func RegisterConfigServiceHandlerServer(ctx context.Context, mux *runtime.ServeM
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/icuc.api.ConfigService/Get", runtime.WithHTTPPathPattern("/api/v1/config"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/icuc.api.ConfigService/Get", runtime.WithHTTPPathPattern("/config"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -145,7 +145,7 @@ func RegisterConfigServiceHandlerClient(ctx context.Context, mux *runtime.ServeM
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/icuc.api.ConfigService/Get", runtime.WithHTTPPathPattern("/api/v1/config"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/icuc.api.ConfigService/Get", runtime.WithHTTPPathPattern("/config"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -165,7 +165,7 @@ func RegisterConfigServiceHandlerClient(ctx context.Context, mux *runtime.ServeM
 }
 
 var (
-	pattern_ConfigService_Get_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 2, 2}, []string{"api", "v1", "config"}, ""))
+	pattern_ConfigService_Get_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0}, []string{"config"}, ""))
 )
 
 var (
