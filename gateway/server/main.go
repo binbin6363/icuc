@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"net/http"
 	"os"
 	"strings"
 
@@ -23,6 +24,7 @@ import (
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"
 	"go.opentelemetry.io/otel/sdk/resource"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 )
 
@@ -98,32 +100,24 @@ func main() {
 
 	//service.Init()
 	// 创建 gRPC 服务器
-	// grpcServer := grpc.NewServer()
-	// apipb.RegisterConfigServiceServer(grpcServer, config.New())
+	grpcServer := grpc.NewServer()
+	apipb.RegisterConfigServiceServer(grpcServer, config.New())
+	apppb.RegisterAuthServiceServer(grpcServer, auth.New())
+	apppb.RegisterMessageServiceServer(grpcServer, message.New())
 
 	// 创建 gRPC-Gateway 多路复用器
 	mux := runtime.NewServeMux()
-	// 创建一个 gRPC 连接
-	//grpcConn, err := grpc.Dial("localhost:50051", grpc.WithInsecure())
-	//if err != nil {
-	//	log.Fatalf("Failed to connect to gRPC server: %v", err)
-	//}
+
 	// 注册 gRPC-Gateway 处理程序
-	err := apppb.RegisterAuthServiceHandlerServer(context.Background(), mux, auth.New())
+	err = apipb(context.Background(), mux, ":50051", []grpc.DialOption{grpc.WithInsecure()})
 	if err != nil {
-		log.Fatalf("Failed to register gRPC-Gateway AuthService handler: %v", err)
-	}
-	err = apppb.RegisterMessageServiceHandlerServer(context.Background(), mux, message.New())
-	if err != nil {
-		log.Fatalf("Failed to register gRPC-Gateway MessageService handler: %v", err)
-	}
-	err = apipb.RegisterConfigServiceHandlerServer(context.Background(), mux, config.New())
-	if err != nil {
-		log.Fatalf("Failed to register gRPC-Gateway ConfigService handler: %v", err)
+		log.Fatalf("Failed to register gRPC-Gateway handler: %v", err)
 	}
 
-	r.Use(gin.WrapH(mux))
-	//r.Any("/api/", gin.WrapH(mux))
+	// 启动 HTTP 服务器
+	if err := http.ListenAndServe(":8080", mux); err != nil {
+		log.Fatalf("Failed to serve HTTP server: %v", err)
+	}
 
 	if err := r.Run(cfg.AppConfig().ServerInfo.Listen); err != nil {
 		log.Fatalf("startup service failed, err:%v", err)
