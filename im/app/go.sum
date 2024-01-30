@@ -3,8 +3,6 @@ github.com/binbin6363/icuc/common v0.0.0-20240129154319-d866e4ffa743 h1:g7WwHwQL
 github.com/binbin6363/icuc/common v0.0.0-20240129154319-d866e4ffa743/go.mod h1:ETvJc/dqCYiIhYZEdFR1CacrxNMhdZlwwh/76VV88Xs=
 github.com/binbin6363/icuc/protobuf/api v0.0.0-20240129154319-d866e4ffa743 h1:+iX7mw8zXYxC3lXCgFQuoYKNweGy6WLzT2dnqKjRqCI=
 github.com/binbin6363/icuc/protobuf/api v0.0.0-20240129154319-d866e4ffa743/go.mod h1:457SSL/T7Qlzw3G0N47Gw78iyEhNAd1ZODGGVqTqubE=
-github.com/binbin6363/icuc/protobuf/im/app v0.0.0-20240129154319-d866e4ffa743 h1:+lQ5YwjXvqFacoR4pZ5bs4t3oaE3aiASwat1b65MGrg=
-github.com/binbin6363/icuc/protobuf/im/app v0.0.0-20240129154319-d866e4ffa743/go.mod h1:mOGLtPjGFkBnO7u22oUfqC6N0jX9VQxzgEs4G8ERjVk=
 github.com/binbin6363/icuc/protobuf/im/app v0.0.0-20240130024112-caffe62b49cb h1:GkSmenRmwoM7gN4rq00OE0lWZsrfcAy+DRumCs5rVKo=
 github.com/binbin6363/icuc/protobuf/im/app v0.0.0-20240130024112-caffe62b49cb/go.mod h1:eyb6Ro5C9148lwu2bmnj/9C+/+nDU6eP2HU1d955GnM=
 github.com/bytedance/sonic v1.5.0/go.mod h1:ED5hyg4y6t3/9Ku1R6dU/4KyJ48DZ4jPhfY1O2AihPM=
