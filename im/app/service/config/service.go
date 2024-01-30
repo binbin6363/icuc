@@ -3,8 +3,8 @@ package config
 import (
 	"context"
 
+	apipb "github.com/binbin6363/icuc-pb/protobuf/api"
 	"github.com/binbin6363/icuc/common/log"
-	apipb "github.com/binbin6363/icuc/protobuf/api"
 )
 
 type Service struct {

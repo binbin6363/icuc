@@ -3,7 +3,7 @@ package message
 import (
 	"context"
 
-	apppb "github.com/binbin6363/icuc/protobuf/im/app"
+	apppb "github.com/binbin6363/icuc-pb/protobuf/im/app"
 )
 
 type Service struct {

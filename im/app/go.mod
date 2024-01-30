@@ -3,9 +3,9 @@ module github.com/binbin6363/icuc/im/app
 go 1.19
 
 require (
+	github.com/binbin6363/icuc-pb/protobuf/api v0.0.0-20240130053925-3a13331771bc
+	github.com/binbin6363/icuc-pb/protobuf/im/app v0.0.0-20240130053925-3a13331771bc
 	github.com/binbin6363/icuc/common v0.0.0-20240129154319-d866e4ffa743
-	github.com/binbin6363/icuc/protobuf/api v0.0.0-20240130020821-ee2934001cc9
-	github.com/binbin6363/icuc/protobuf/im/app v0.0.0-20240130024112-caffe62b49cb
 	github.com/gin-gonic/gin v1.9.1
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.19.1
 	go.opentelemetry.io/otel v1.22.0

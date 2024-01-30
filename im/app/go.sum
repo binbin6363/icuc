@@ -1,12 +1,10 @@
 github.com/BurntSushi/toml v1.3.2 h1:o7IhLm0Msx3BaB+n3Ag7L8EVlByGnpq14C4YWiu/gL8=
+github.com/binbin6363/icuc-pb/protobuf/api v0.0.0-20240130053925-3a13331771bc h1:z7G+4yidBqhKIwuq5O2ON1YW64PKTveuC+d7JdMDzRA=
+github.com/binbin6363/icuc-pb/protobuf/api v0.0.0-20240130053925-3a13331771bc/go.mod h1:xus+6RF3jORX65yNtfPUqeUFXsLyiiIgT87kzbfctgc=
+github.com/binbin6363/icuc-pb/protobuf/im/app v0.0.0-20240130053925-3a13331771bc h1:tNjG35QCCmUKfnPP+4YW6aLcMjzhAPSdejYD2J2NY/k=
+github.com/binbin6363/icuc-pb/protobuf/im/app v0.0.0-20240130053925-3a13331771bc/go.mod h1:NoYFWRaZ6t/1pLhxvMoB4/gjWCPrqdE/XBQwPykWS0U=
 github.com/binbin6363/icuc/common v0.0.0-20240129154319-d866e4ffa743 h1:g7WwHwQLoLoilqZBQIifMmeO/ZnAQhlb9cqiZQrSdrI=
 github.com/binbin6363/icuc/common v0.0.0-20240129154319-d866e4ffa743/go.mod h1:ETvJc/dqCYiIhYZEdFR1CacrxNMhdZlwwh/76VV88Xs=
-github.com/binbin6363/icuc/protobuf/api v0.0.0-20240129154319-d866e4ffa743 h1:+iX7mw8zXYxC3lXCgFQuoYKNweGy6WLzT2dnqKjRqCI=
-github.com/binbin6363/icuc/protobuf/api v0.0.0-20240129154319-d866e4ffa743/go.mod h1:457SSL/T7Qlzw3G0N47Gw78iyEhNAd1ZODGGVqTqubE=
-github.com/binbin6363/icuc/protobuf/api v0.0.0-20240130020821-ee2934001cc9 h1:VJ0XQk0vfy6EaGcgAujtpali7dWLyEpe1/0FFaOcHgs=
-github.com/binbin6363/icuc/protobuf/api v0.0.0-20240130020821-ee2934001cc9/go.mod h1:jEjs54LcaFedde17bAdK9whSaoB24s2fB40T98fps5w=
-github.com/binbin6363/icuc/protobuf/im/app v0.0.0-20240130024112-caffe62b49cb h1:GkSmenRmwoM7gN4rq00OE0lWZsrfcAy+DRumCs5rVKo=
-github.com/binbin6363/icuc/protobuf/im/app v0.0.0-20240130024112-caffe62b49cb/go.mod h1:eyb6Ro5C9148lwu2bmnj/9C+/+nDU6eP2HU1d955GnM=
 github.com/bytedance/sonic v1.5.0/go.mod h1:ED5hyg4y6t3/9Ku1R6dU/4KyJ48DZ4jPhfY1O2AihPM=
 github.com/bytedance/sonic v1.9.1 h1:6iJ6NqdoxCDr6mbY8h18oSO+cShGSMRGCEo7F2h0x8s=
 github.com/bytedance/sonic v1.9.1/go.mod h1:i736AoUSYt75HyZLoJW9ERYxcy6eaN6h4BZXU064P/U=

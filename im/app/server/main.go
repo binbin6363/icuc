@@ -8,13 +8,13 @@ import (
 
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 
+	apipb "github.com/binbin6363/icuc-pb/protobuf/api"
+	apppb "github.com/binbin6363/icuc-pb/protobuf/im/app"
 	"github.com/binbin6363/icuc/common/log"
 	cfg "github.com/binbin6363/icuc/im/app/config"
 	"github.com/binbin6363/icuc/im/app/service/auth"
 	"github.com/binbin6363/icuc/im/app/service/config"
 	"github.com/binbin6363/icuc/im/app/service/message"
-	apipb "github.com/binbin6363/icuc/protobuf/api"
-	apppb "github.com/binbin6363/icuc/protobuf/im/app"
 
 	"github.com/gin-gonic/gin"
 	"go.opentelemetry.io/otel"
