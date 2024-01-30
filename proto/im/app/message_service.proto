@@ -1,17 +1,35 @@
 syntax = "proto3";
 
+import "google/api/annotations.proto";
+
 package icuc.im.app;
 option go_package = "protobuf/im/app";
 
 service MessageService {
   // 单人消息
-  rpc SingleMessage(SingleMessageRequest) returns (SingleMessageResponse) {}
+  rpc SingleMessage(SingleMessageRequest) returns (SingleMessageResponse) {
+    option (google.api.http) = {
+      post: "/im/message/single"
+    };
+  }
   // 群消息
-  rpc GroupMessage(GroupMessageRequest) returns (GroupMessageResponse) {}
+  rpc GroupMessage(GroupMessageRequest) returns (GroupMessageResponse) {
+    option (google.api.http) = {
+      post: "/im/message/group"
+    };
+  }
   // 图片消息
-  rpc ImageMessage(ImageMessageRequest) returns (ImageMessageResponse) {}
+  rpc ImageMessage(ImageMessageRequest) returns (ImageMessageResponse) {
+    option (google.api.http) = {
+      post: "/im/message/image"
+    };
+  }
   // 文件消息
-  rpc FileMessage(FileMessageRequest) returns (FileMessageResponse) {}
+  rpc FileMessage(FileMessageRequest) returns (FileMessageResponse) {
+    option (google.api.http) = {
+      post: "/im/message/file"
+    };
+  }
 }
 
 message SingleMessageRequest {

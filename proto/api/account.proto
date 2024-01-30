@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package icuc.api;
+option go_package = "protobuf/api";
+
+import "google/api/annotations.proto";
+
+service AccountService {
+  // 注册
+  rpc Register(RegisterRequest) returns (RegisterResponse) {
+    option (google.api.http) = {
+      post: "/register"
+    };
+  }
+  // 刷新token
+  rpc Refresh(RefreshRequest) returns (RefreshResponse) {
+    option (google.api.http) = {
+      post: "/refresh"
+    };
+  }
+  // 忘记密码
+  rpc Forget(ForgetRequest) returns (ForgetResponse) {
+    option (google.api.http) = {
+      post: "/forget"
+    };
+  }
+}
+
+
+message RegisterRequest {
+  // 请求消息定义
+}
+
+message RegisterResponse {
+  // 响应消息定义
+}
+
+message RefreshRequest {
+  // 请求消息定义
+}
+
+message RefreshResponse {
+  // 响应消息定义
+}
+
+message ForgetRequest {
+  // 请求消息定义
+}
+
+message ForgetResponse {
+  // 响应消息定义
+}

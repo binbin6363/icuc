@@ -1,19 +1,24 @@
 syntax = "proto3";
 
+import "google/api/annotations.proto";
+
 package icuc.im.app;
 option go_package = "protobuf/im/app";
 
 service AuthService {
   // 登入
-  rpc Login(LoginRequest) returns (LoginResponse) {}
+  rpc Login(LoginRequest) returns (LoginResponse) {
+    option (google.api.http) = {
+      post: "/im/login"
+    };
+  }
   // 登出
-  rpc Logout(LogoutRequest) returns (LogoutResponse) {}
-  // 注册
-  rpc Register(RegisterRequest) returns (RegisterResponse) {}
-  // 刷新token
-  rpc Refresh(RefreshRequest) returns (RefreshResponse) {}
-  // 忘记密码
-  rpc Forget(ForgetRequest) returns (ForgetResponse) {}
+  rpc Logout(LogoutRequest) returns (LogoutResponse) {
+    option (google.api.http) = {
+      post: "/im/logout"
+    };
+  }
+
 }
 
 message UserPassInfo {
@@ -47,27 +52,3 @@ message LogoutResponse {
   // 响应消息定义
 }
 
-
-message RegisterRequest {
-  // 请求消息定义
-}
-
-message RegisterResponse {
-  // 响应消息定义
-}
-
-message RefreshRequest {
-  // 请求消息定义
-}
-
-message RefreshResponse {
-  // 响应消息定义
-}
-
-message ForgetRequest {
-  // 请求消息定义
-}
-
-message ForgetResponse {
-  // 响应消息定义
-}

@@ -9,7 +9,7 @@ service ConfigService {
   // 拉取配置
   rpc Get(ConfigRequest) returns (ConfigResponse) {
     option (google.api.http) = {
-      get: "/api/v1/config"
+      get: "/config"
     };
   }
 }
